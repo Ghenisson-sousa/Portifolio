@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghenisson S. Santos</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 4rem 0;
+        }
+
+        .profile-pic {
+            margin-right: 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        h1 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+        h1 span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--accent-color);
+    width: 0;
+    animation: typing 3s steps(20, end) 1s forwards, blink 0.75s step-end infinite;
+}
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+
+        .skills-list li {
+            background-color: #1e293b;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .projects {
+            padding: 4rem 0;
+        }
+
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card a {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #1e293b;
+            padding: 1rem 0;
+            text-align: center;
+            color: var(--accent-color);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+          /*  .hero {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }*/
+.hero-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero-flex {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+            .profile-pic {
+                margin-right: 2rem;
+            }
+
+            h1 {
+                display: inline-block;
+            }
+        }
+        
+.sobre {
+    padding: 4rem 0;
+    background-color: #0f172a;
+}
+
+.sobre-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.sobre-texto {
+    color: var(--text-color);
+    max-width: 600px;
+    text-align: center;
+}
+
+.sobre-texto h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Layout lado a lado em telas maiores */
+@media (min-width: 768px) {
+    .sobre-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e293b;
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.menu h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+    </style>
+</head>
+<body>
+  
+<header class="menu">
+  <h1>Portfólio</h1>
+</header>
+  
+    <!-- Seção Principal -->
+<div class="container hero-flex">
+  <div>
+    <h1><span>Ghenisson S. Santos</span></h1>
+    <p>Desenvolvedor Web</p>
+  </div>
+  <div class="profile-pic">
+    <img src="perfil.jpg" alt="Foto de Ghenisson" />
+  </div>
+</div>
+
+<!-- Sobre mim -->
+<section class="sobre">
+  <div class="container sobre-flex">
+    <div class="sobre-img">
+      <img src="sobre.jpg" alt="Imagem representando Ghenisson" />
+    </div>
+    <div class="sobre-texto">
+      <h2>Sobre mim</h2>
+      <p>
+        Me chamo Ghenisson Sousa Santos, sou desenvolvedor web, crio páginas web estáticas que impactam e passam autoridade e profissionalismo. Minha missão é, através desse trabalho, contribuir para a conservação e compartilhamento de cultura e história do Brasil que muitos desprezam ou desconhecem. Por isso, parte dos valores arrecadados neste trabalho são destinados ao canal no YouTube CULTURA BRASIL.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Habilidades -->
+    <section class="skills">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React Native</li>
+                <li>Tailwind</li>
+                <li>PHP</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projects">
+        <div class="container">
+            <h2>Projetos</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto.</p>
+                    <a href="#">Ver projeto</a>
+                </div>
+                <div class="card">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto.</p>
+                    <a href="#">Ver projeto</a>
+                </div>
+                <div class="card">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto.</p>
+                    <a href="#">Ver projeto</a>
+                </div>
+                <div class="card">
+                    <h3>Projeto 4</h3>
+                    <p>Descrição do projeto.</p>
+                    <a href="#">Ver projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Ghenisson Sousa | 2025</p>
+    </footer>
+</body>
+</html>
